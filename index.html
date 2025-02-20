@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dsbshan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+
+            <nav>
+
+                <img src="Images/13.png" class="logo">
+
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-rectangle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Fullstack Developer</p>
+                <h1>Hi I'm <span>Dsb</span><br>Shan From Sri Lanka</h1>
+            </div>
+        </div>
+    </div>
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/2 (1).jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I’m a passionate and detail-oriented Full-Stack Software Developer with expertise in Angular,
+                        .NET, React.js, and Laravel. Recently graduated with a BSc (Hons) in Computing from Wrexham
+                        University, where I achieved First-Class Honors, I am actively seeking an internship to further
+                        hone my skills and gain hands-on experience in the software development field.
+
+                        My technical skills span front-end and back-end development, with a keen focus on building
+                        user-friendly, efficient applications. I have hands-on experience in project management, data
+                        modeling, and agile development, and I’m committed to maintaining clean, well-documented code.
+                        I’m particularly interested in leveraging my skills to drive innovation and deliver impactful
+                        software solutions.
+
+                        Aspiring to become an expert Angular .NET Software Engineer, I am eager to expand my
+                        professional network and learn from seasoned industry professionals.</p>
+
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills', this)">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience', this)">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education', this)">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>FrontEnd Development</span><br>Angular,React</li>
+                            <li><span>Backend Development</span><br>asp.net,Laravel</li>
+                            <li><span>Graphic Design</span><br>Adobe Photoshop,Adobe Illustrator</li>
+                            <li><span>Video Editting</span><br>Adobe premeir pro,Adobe AfterEffects</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Intern</span><br>RMC It Solutions</li>
+                            <li><span>Fullstack Developer</span><br>Upwork</li>
+                            <li><span>Graphic Designer</span><br>FIver</li>
+                            <li><span>Video Editor</span><br>FIver</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2020-2021</span><br>Ordinary Education</li>
+                            <li><span>2020-2021</span><br>Diploma in IT at Londontec City Campuss</li>
+                            <li><span>2021-2024</span><br>HND In Computing at Londontec City Campuss</li>
+                            <li><span>2024-2025</span><br>Bsc Hons Computing at Wrexham University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h1>FrontEnd </h1>
+                    <p>I specialize in frontend development using Angular and React,crafting dynamic, responsive, and
+                        user-friendly web applications.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h1>Backend </h1>
+                    <p>I provide backend development services using ASP.NET and Laravel, building scalable, secure, and
+                        high-performance solutions tailored to business needs.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <h1>Graphic Design</h1>
+                    <p>I provide professional graphic design services using Adobe Photoshop and Illustrator,
+                        specializing in high-quality visuals, branding, and digital artwork.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/done1.jpg">
+                    <div class="layer">
+                        <h3>Techcity Learning System</h3>
+                        <p>
+                            Developed a learning platform for Londontec City Campus using PHP, MySQL, HTML,JS and CSS.
+                            Enabled streamlined interaction between students and teachers, integrating job management
+                            features for degree-related and general job searches.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/done2.jpg">
+                    <div class="layer">
+                        <h3>Microfinance System (In Progress)</h3>
+                        <p>
+                            Currently developing a microfinance system using Angular and .NET. This project aims to
+                            provide a platform for managing loans, payments, and user information, focusing on
+                            streamlining financial operations for microfinance institutions.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/done3.jpg">
+                    <div class="layer">
+                        <h3>Library Management System</h3>
+                        <p>
+                            Designed a comprehensive library management system using Angular and .NET, facilitating
+                            efficient cataloging, lending, and tracking of books within the system.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>Dsbdilshan@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-flip"></i>074-3148614</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="Images/my-cv.pdf.pdf" download class="btn btn2">DownLoad CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Name" required>
+                        <input type="email" name="Email" placeholder="email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message" required></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                    <span id="msg">
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+      
+    <script src="dsbshan.js"></script>
+</body>
+
+</html>
