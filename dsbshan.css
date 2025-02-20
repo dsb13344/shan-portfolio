@@ -36,7 +36,10 @@ body{
     padding: 10px 10% ;
 }
 .logo{
-    width: 200px;;
+    width: 400px;
+}
+.lovely{
+    width: 300px;
 }
 
 nav{
