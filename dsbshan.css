@@ -340,6 +340,9 @@ nav .fa-solid{
     display: block;
     font-size: 25px;
    }
+   .lovely{
+    width: 100px;
+   }
    nav ul{
     background:#ff004f;
     position: fixed;
