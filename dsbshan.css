@@ -17,7 +17,19 @@ body{
     background-size: cover;
     background-image:url(Images/90.jpg);
     background-position: center;
+    font-size: 2.5em;
+
     
+}
+.title {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(20px);
+}
+.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .container{

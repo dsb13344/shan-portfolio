@@ -12,6 +12,18 @@ function opentab(tabname, element) {
     element.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 }
+const titles = document.querySelectorAll(".title");
+let index = 0;
+
+function changeTitle() {
+    titles[index].classList.remove("active"); // Remove active class from current title
+    index = (index + 1) % titles.length; // Move to next title
+    titles[index].classList.add("active"); // Add active class to new title
+}
+
+setInterval(changeTitle, 3000); // Change title every 3 seconds
+
+
 
 // Menu Toggle Functions
 var sidemenu = document.getElementById("sidemenu");
@@ -44,4 +56,44 @@ form.addEventListener('submit', e => {
             msg.style.color = 'red';
             msg.innerHTML = "Something went wrong!";
         });
+});
+let tabLinks = document.querySelectorAll(".tab-links");
+let tabContents = document.querySelectorAll(".tab-contents");
+let currentIndex = 0; // Keep track of the active tab
+let autoScrollInterval; // Store the interval ID
+
+function opentab(tabname, element) {
+    // Remove the active class from all tabs and buttons
+    tabLinks.forEach(link => link.classList.remove("active-link"));
+    tabContents.forEach(content => content.classList.remove("active-tab"));
+
+    // Add the active class to the clicked button and corresponding content
+    document.getElementById(tabname).classList.add("active-tab");
+    element.classList.add("active-link");
+
+    // Reset auto-scroll whenever user manually clicks
+    resetAutoScroll();
+}
+
+// Function to cycle through tabs automatically
+function autoScrollTabs() {
+    tabLinks[currentIndex].classList.remove("active-link");
+    tabContents[currentIndex].classList.remove("active-tab");
+
+    // Move to the next tab, looping back if necessary
+    currentIndex = (currentIndex + 1) % tabLinks.length;
+
+    tabLinks[currentIndex].classList.add("active-link");
+    tabContents[currentIndex].classList.add("active-tab");
+}
+
+// Reset and restart auto-scroll
+function resetAutoScroll() {
+    clearInterval(autoScrollInterval);
+    autoScrollInterval = setInterval(autoScrollTabs, 3000); // Change tab every 3 seconds
+}
+
+// Start auto-scroll when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+    resetAutoScroll();
 });
