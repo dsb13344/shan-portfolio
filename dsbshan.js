@@ -111,3 +111,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(scrollServices, 3000);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Ensure ScrollReveal is loaded
+    if (typeof ScrollReveal === "undefined") {
+        console.error("ScrollReveal is not loaded.");
+        return;
+    }
+
+    // Create a new ScrollReveal instance
+    const sr = ScrollReveal({
+        distance: "50px",
+        duration: 2000,
+        easing: "cubic-bezier(0.5, 1, 1, 1)", // Fixed easing
+        reset: true,
+    });
+
+    // Function to reveal elements
+    function revealElements() {
+        sr.reveal("#header", { origin: "top", delay: 200 });
+        sr.reveal(".header-text h1", { origin: "left", delay: 300 });
+        sr. reveal(".lovely", { origin: "right", delay: 400 });
+        sr.reveal(".sub-title", { origin: "top", delay: 500 });
+        sr.reveal(".about-col-2", { origin: "right", delay: 600 });
+        sr.reveal(".about", { origin: "bottom", delay: 400, duration: 2500 });
+    }
+
+    // Call the function
+    revealElements();
+});
