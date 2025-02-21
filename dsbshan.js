@@ -97,3 +97,17 @@ function resetAutoScroll() {
 document.addEventListener("DOMContentLoaded", () => {
     resetAutoScroll();
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const servicesList = document.querySelector(".services-list");
+    let index = 0;
+
+    function scrollServices() {
+        index++;
+        if (index >= servicesList.children.length) {
+            index = 0;
+        }
+        servicesList.style.transform = `translateX(-${index * 25}%)`;
+    }
+
+    setInterval(scrollServices, 3000);
+});

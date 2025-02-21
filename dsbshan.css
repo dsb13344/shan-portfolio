@@ -39,7 +39,7 @@ body{
     width: 400px;
 }
 .lovely{
-    width: 300px;
+    width: 100px;
 }
 
 nav{
@@ -162,6 +162,7 @@ margin: 10px 0;
 }
 #services{
     padding: 30px 0;
+    
 }
 .services-list{
     display: grid;
