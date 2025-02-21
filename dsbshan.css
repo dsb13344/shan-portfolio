@@ -164,12 +164,36 @@ margin: 10px 0;
     padding: 30px 0;
     
 }
+.services-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
 .services-list{
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     grid-gap: 40px;
     margin-top: 50px;
+    animation: scrollServices 12s linear infinite;
    
+   
+}
+
+.service {
+    flex: 0 0 25%;
+    padding: 20px;
+    background: #f8f8f8;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+@keyframes scrollServices {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
 }
 .services-list div{
     background: #262626;
