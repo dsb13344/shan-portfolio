@@ -194,7 +194,7 @@ margin: 10px 0;
     
    
 
-    10% { transform: translateY(-10%); }
+    10% { transform: translateY(10%); }
     0% { transform: translateY(0); }
 
 }
