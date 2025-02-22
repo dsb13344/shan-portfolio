@@ -118,8 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to reveal elements
     function revealElements() {
         sr.reveal("#header", { origin: "top", delay: 200 });
-        sr.reveal(".header-text h1", { origin: "left", delay: 300 });
-        sr. reveal(".lovely", { origin: "right", delay: 400 });
+    //   sr.reveal(".header-text h1", { origin: "left", delay: 300 });
+       sr. reveal(".lovely", { origin: "right", delay: 50 });
         sr.reveal(".sub-title", { origin: "top", delay: 300 });
         sr.reveal(".about-col-2", { origin: "bottom", delay: 600 });
         sr.reveal(".about-col-1", { origin: "left", delay: 500 });
@@ -128,4 +128,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Call the function
     revealElements();
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".header-text"); // Select both elements
+
+    function checkVisibility() {
+        elements.forEach(element => {
+            var position = element.getBoundingClientRect();
+
+            if (position.top < window.innerHeight && position.bottom >= 0) {
+                element.classList.add('visible');
+            } else {
+                element.classList.remove('visible');
+            }
+        });
+    }
+
+    // Run on page load
+    checkVisibility();
+
+    // Run when user scrolls
+    window.addEventListener("scroll", checkVisibility);
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const works = document.querySelectorAll(".work");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    works.forEach((work) => observer.observe(work));
 });
