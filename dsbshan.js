@@ -97,6 +97,7 @@ function resetAutoScroll() {
 document.addEventListener("DOMContentLoaded", () => {
     resetAutoScroll();
 });
+
 document.addEventListener("DOMContentLoaded", function () {
     const servicesList = document.querySelector(".services-list");
     let index = 0;
@@ -106,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (index >= servicesList.children.length) {
             index = 0;
         }
-        servicesList.style.transform = `translateX(-${index * 25}%)`;
+        servicesList.style.transform = `translateX(-${index * 0}%)`;
     }
 
     setInterval(scrollServices, 3000);
@@ -132,9 +133,10 @@ document.addEventListener("DOMContentLoaded", function () {
         sr.reveal("#header", { origin: "top", delay: 200 });
         sr.reveal(".header-text h1", { origin: "left", delay: 300 });
         sr. reveal(".lovely", { origin: "right", delay: 400 });
-        sr.reveal(".sub-title", { origin: "top", delay: 500 });
-        sr.reveal(".about-col-2", { origin: "right", delay: 600 });
-        sr.reveal(".about", { origin: "bottom", delay: 400, duration: 2500 });
+        sr.reveal(".sub-title", { origin: "top", delay: 300 });
+        sr.reveal(".about-col-2", { origin: "bottom", delay: 600 });
+        sr.reveal(".about-col-1", { origin: "left", delay: 1000 });
+
     }
 
     // Call the function
