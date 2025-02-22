@@ -152,14 +152,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
     const works = document.querySelectorAll(".work");
+    let index = 0;
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
-        });
-    }, { threshold: 0.2 });
+    function showNextLayer() {
+        works.forEach(work => work.classList.remove("active")); // Remove previous active class
 
-    works.forEach((work) => observer.observe(work));
+        works[index].classList.add("active"); // Add active class to current work
+
+        index = (index + 1) % works.length; // Move to the next work item
+    }
+
+    setInterval(showNextLayer, 3000); // Change every 3 seconds
 });
+
