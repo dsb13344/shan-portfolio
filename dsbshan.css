@@ -194,8 +194,9 @@ margin: 10px 0;
     
    
 
-    10% { transform: translateY(10%); }
-    0% { transform: translateY(0); }
+    5% { transform: translateY(5%); }
+    0% { transform: translateY(0%); }
+    5% { transform: translateY(5%); }
 
 }
 .services-list div{
