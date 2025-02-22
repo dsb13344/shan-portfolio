@@ -186,18 +186,9 @@ margin: 10px 0;
     margin: 10px;
     border-radius: 10px;
  
-    transition: transform 0.7s;
+    
 }
-@keyframes scrollServices {
-    
-   
-    
-   
 
- 
-   
-   
-}
 .services-list div{
     background: #262626;
     font-size: 13px;
@@ -206,6 +197,7 @@ margin: 10px 0;
     border-radius: 10px;
     transition: background 0.5s,transform 0.5s;
     cursor: pointer;
+    
 }
 .service i {
     
@@ -232,8 +224,19 @@ margin: 10px 0;
 .services-list div:hover{
     background: #ff004f;
     transform: translateX(-10px)
-    
+   
  
+}
+@keyframes colorScroll {
+    0% { background: #ff004f; }
+    25% { background: #ff6600; }
+    50% { background: #33cc33; }
+    75% { background: #0066ff; }
+    100% { background: #ff004f; }
+}
+.services-list div {
+    animation: colorScroll 5s infinite linear;
+    transition: transform 0.3s ease;
 }
 #portfolio{
     padding: 50px 0;

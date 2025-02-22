@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
         sr. reveal(".lovely", { origin: "right", delay: 400 });
         sr.reveal(".sub-title", { origin: "top", delay: 300 });
         sr.reveal(".about-col-2", { origin: "bottom", delay: 600 });
-        sr.reveal(".about-col-1", { origin: "left", delay: 1000 });
+        sr.reveal(".about-col-1", { origin: "left", delay: 500 });
 
     }
 
