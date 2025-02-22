@@ -165,3 +165,15 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(showNextLayer, 3000); // Change every 3 seconds
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+        document.querySelector(".door-overlay").classList.add("open");
+
+        // Remove the doors from the DOM after animation
+        setTimeout(() => {
+            document.querySelector(".door-overlay").remove();
+        }, 2000);
+    }, 1000); // Delay before the doors open
+});
+
+
