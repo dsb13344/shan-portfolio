@@ -186,7 +186,7 @@ margin: 10px 0;
     margin: 10px;
     border-radius: 10px;
  
-    transition: transform 0.3s;
+    transition: transform 0.7s;
 }
 @keyframes scrollServices {
     
@@ -194,9 +194,9 @@ margin: 10px 0;
     
    
 
-    5% { transform: translateY(5%); }
+    5% { transform: translateY(-5%); }
     0% { transform: translateY(0%); }
-    5% { transform: translateY(5%); }
+    5% { transform: translateY(-5%); }
 
 }
 .services-list div{
